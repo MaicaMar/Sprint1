@@ -1,0 +1,229 @@
+* { 
+    max-width: 1200px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.padre {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+    .header { 
+        background: url("./images/header.jpg"); 
+        background-position: center;
+        background-attachment: contain;
+        background-size: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        height: 300px;
+    }
+        .menu { 
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            margin-top: 10px;
+        }
+            .logo { 
+                display: flex;
+                flex: 1 1 auto;
+                justify-content: center;
+            }
+                .logo img {
+                    max-height: 60px;
+                }
+            .nav {
+                display: flex;
+                flex: 4 1 auto;
+                justify-content: center;
+            }
+                .nav a {
+                    color: gray;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    padding: 0 10px;
+                    letter-spacing: 1px;
+                }
+                .nav a:hover {
+                    color: salmon;
+                }
+            .social {
+                display: flex;
+                flex: 1 1 auto;
+                justify-content: center;
+            }
+                .social a {
+                    font-size: 18px;
+                    color: gray;
+                    padding: 0 5px;
+                }
+                .social a:hover {
+                    color: salmon;
+                }
+            .texto-principal { 
+                display:flex;
+                justify-content: center;
+                align-items: flex-end;
+                background-color: rgba(141, 136, 136, 0.2);
+                margin: auto 10% 0 10%;
+                padding: 20px 0 20px 0;
+            }
+                h1 { 
+                    font-family: 'Lora', serif;
+                    font-size: 30px;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                    color: salmon;
+                    text-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.3);
+                    text-align: center;
+                }
+    .section {
+        border-top: 8px solid white;
+        background: #C9C6C6;
+        display: flex;
+    }
+        .articulos {
+            background: rgb(168, 169, 165);
+            flex: 2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+        }
+            .article {
+                flex: 1 1 40%;
+                margin: 10px 10px 10px 10px;
+                flex: 1 1 45%;
+                background: #DBD7D6;
+                border: 10px solid #DBD7D6;
+            }
+                .article img { 
+                    width: 100%; 
+                }
+                h3 {
+                    color: yellow;
+                    font-size: 10px;
+                    margin: -20px 0 0 10px;
+                }
+                h2 {
+                    color: #fff;
+                    font-size: 16px;
+                    padding: 10px 0px 7px 10px;
+                    text-transform: uppercase;
+                    line-height: 1;
+                }
+                    .fondo-titulos {
+                        background-color: salmon;
+                        border-top: 7px solid #fff;
+                    }
+                .parrafo-articulos {
+                    font-size: 13px;
+                    letter-spacing: 1px;
+                    color: #363636;
+                    column-count:2;
+                    padding: 8px 10px 0px 10px;
+                    hyphens: auto;
+                }
+                .article a { 
+                    color:  #363636;
+                    font-size: 12px;
+                    font-weight:600;
+                    padding: 15px 0px 10px 10px;
+                    display: inline-block;
+                }
+                .article a:hover {
+                    color: salmon;
+                }
+                .parrafo-cierre {
+                    background: rgb(168, 169, 165);
+                    font-size: 14px;
+                    color: #363636;
+                    text-align: center;
+                    padding: 10px 10px 20px 10px;
+                }
+        .aside {
+            flex: 1 1 auto;
+            border-left: 10px solid white;
+            text-align: center;
+        }
+            h4 {
+                color: black;
+                padding: 20px 10px 10px 10px;
+                font-weight: 700;
+            }
+            .aside-parrafo {
+                font-size: 14px;
+                color: black;
+                padding: 10px 10px 20px 10px;
+            }
+
+    .footer {
+        background: rgb(168, 169, 165);
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        height: 40px;
+        align-items: center;
+    }
+        .pie {
+            font-size: 14px;
+            color: black;
+        }
+
+/* MEDIA QUERIES */
+
+/*Medium devices (tablets, less than 992px)*/
+@media all and (max-width: 991.98px) {
+    h1 { 
+        font-size: 25px;
+    }
+    .section {
+        flex-direction: column;
+    }
+    .parrafo-articulos {
+        column-count: 1;
+    }
+    .aside {
+        border-left: none;
+    }
+}
+
+/*Small devices (landscape phones, less than 768px)*/
+@media all and (max-width: 767.98px) {
+    .menu {
+        flex-direction: column;
+    }
+    .off {
+        display: none;
+    }
+    .nav a {
+        font-size: 18px;
+        padding: 10px 12px;
+    }                
+    .social a {
+        padding: 5px 10px;
+    }
+    h1 { 
+        font-size: 22px;
+    }
+}
+
+/* X-Small devices (portrait phones, less than 576px)*/
+@media all and (max-width: 575.98px) {
+    .header {
+        background-size: cover;
+    }
+    h1 { 
+        font-size: 18px;
+    }
+    .articulos {
+        flex-direction: column;
+    }
+}
